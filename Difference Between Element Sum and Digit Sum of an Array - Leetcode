@@ -1,0 +1,17 @@
+class Solution {
+    public int differenceOfSum(int[] nums) {
+         int Sum=0,Sum1=0;
+        for(int i=0;i<nums.length;i++){
+            Sum+=nums[i];
+        }
+        for(int i=0;i< nums.length;i++){
+            int sum = nums[i];
+            while(sum!=0) {
+                Sum1 += sum % 10;
+               sum=sum/10;
+            }
+        }
+        int Final=Sum-Sum1;
+        return Final;
+    }
+}
