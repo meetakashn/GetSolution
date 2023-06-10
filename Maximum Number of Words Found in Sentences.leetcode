@@ -1,0 +1,22 @@
+class Solution {
+    public int mostWordsFound(String[] sentences) {
+           int count=1;
+       int[] arr1=new int[sentences.length];
+       for (int i=0;i<sentences.length;i++){ // 1st
+           String s= sentences[i];
+           System.out.println(s);
+           char[] arr =s.toCharArray();
+           for(int j=0;j<s.length();j++){ //2nd
+               System.out.print(arr[j]);
+               if(arr[j]==32)
+                   count++;
+           }
+           arr1[i]=count;
+           count=1;
+       }
+       Arrays.sort(arr1);
+       int m=arr1[arr1.length-1];
+       return m;
+    }
+    
+}
